@@ -4,8 +4,6 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 //import edu.princeton.cs.algs4.StdRandom;
 
 /**
- * 
- * @author kevinmora
  *
  */
 public class Percolation {
@@ -26,18 +24,13 @@ public class Percolation {
 	 */
 	public Percolation(int N){
 		if(n < 0) {
-			throw new IllegalArgumentException
-				("N must be greater than 0.");
+			throw new IllegalArgumentException("N must be greater than 0.");
 		}
-		
 		this.n = N;
 		size = n * n;
-		
 		grid = new boolean[N][N];
-		
 		unionFind = new WeightedQuickUnionUF((size + 2));
 		unionFind2 = new WeightedQuickUnionUF((size + 1));
-		
 		topRow = size;
 		bottomRow = size + 1;
 		
