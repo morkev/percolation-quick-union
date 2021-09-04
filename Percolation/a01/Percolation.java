@@ -7,12 +7,10 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
  * threshold via Monte Carlo simulation. 
  * 
  * Conditions:
- * 	● N-by-N grid of sites (each square represents a site).
- * 	● White site = open; Black site = closed.
- * 	● Each site is open with probability p (or blocked with probability 1-p).
- *	● System percolates iff top and bottom are connected by open sites.
- * 
- * @authors Kevin Mora && 
+ * ● N-by-N grid of sites (each square represents a site).
+ * ● White site = open; Black site = closed.
+ * ● Each site is open with probability p (or blocked with probability 1-p).
+ * ● System percolates iff top and bottom are connected by open sites.
  */
 public class Percolation {
 	private int n;
@@ -22,15 +20,14 @@ public class Percolation {
 	private boolean[][] grid;
 	private int numberOpen = 0;
 	private WeightedQuickUnionUF unionFind;
-	//private WeightedQuickUnionUF unionFind2;
 	
 	/**
 	 * Create an N-­by-­N grid, with all sites blocked.
 	 * 
 	 * ● Initialize all sites to be blocked.
 	 * ● Repeat the following until the system percolates:
-	 * 		○ Choose a site (row i, column j) uniformly at random among all blocked sites.
-	 * 		○ Open the site (row i, column j).
+	 * 	○ Choose a site (row i, column j) uniformly at random among all blocked sites.
+	 * 	○ Open the site (row i, column j).
 	 * ● The fraction of sites that are opened when the system percolates 
 	 *   provides an estimate of the percolation threshold.
 	 * 
@@ -40,15 +37,12 @@ public class Percolation {
 		if(N < 0) {
 			throw new IllegalArgumentException("N must be greater than 0.");
 		}
-		
 		this.n = N;
 		size = n * n;
 		//indicates if block is open or closed
 		grid = new boolean[N][N];
-		
 		unionFind = new WeightedQuickUnionUF(size + 2);
 		//unionFind = new WeightedQuickUnionUF((size + 1));
-		
 		topRow = size;
 		bottomRow = size + 1;
 		
@@ -99,10 +93,9 @@ public class Percolation {
 	 * @param j
 	 * @return
 	 */
-	public boolean isFull(int i, int j){	
-		if (i > n - 1 || i < 0 || j > n - 1 || j < 0) {
-			throw new IndexOutOfBoundsException("Index out of bounds.");
-	    }
+	public boolean isFull(int i, int j){
+	    if (i > n - 1 || i < 0 || j > n - 1 || j < 0) {
+		throw new IndexOutOfBoundsException("Index out of bounds.");}
 	    if (!isOpen(i, j)) {
 	    	return false;
 	    }
@@ -120,7 +113,6 @@ public class Percolation {
 	}
 	
 	/**
-	 * 
 	 * @return
 	 */
 	public boolean percolates(){
@@ -128,7 +120,6 @@ public class Percolation {
 	}
 	
 	/**
-	 * 
 	 * @return
 	 */
 	public String numberOfOpenSites() {
