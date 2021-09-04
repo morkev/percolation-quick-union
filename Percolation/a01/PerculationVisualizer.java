@@ -6,9 +6,12 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw; 
 
 /** 
- *  
- * @author kevinmora 
+ * After each site is opened, <code>PerculationVisualizer</>
+ * will draw full sites in light blue, open sites 
+ * (i.e., sites that aren't full) in white, and blocked sites in black,
+ * with site (0, 0) in the upper left-hand corner.
  * 
+ * @authors Kevin Mora && 
  */ 
 public class PerculationVisualizer { 
     // delay in milliseconds (controls animation speed) 
@@ -18,8 +21,9 @@ public class PerculationVisualizer {
     public static void draw(Percolation perc, int N) { 
         StdDraw.clear(); 
         StdDraw.setPenColor(StdDraw.BLACK); 
-        StdDraw.setXscale(-.05*N, 1.05*N); 
-        StdDraw.setYscale(-.05*N, 1.05*N);   // leave a border to write text 
+        StdDraw.setXscale(-.05 * N, 1.05 * N); 
+        // leave a border to write text 
+        StdDraw.setYscale(-.05 * N, 1.05 * N);
         StdDraw.filledSquare(N/2.0, N/2.0, N/2.0); 
         // draw N-by-N grid 
         for (int row = 0; row < N; row++) { 
@@ -39,7 +43,7 @@ public class PerculationVisualizer {
         // write status text 
         StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 12)); 
         StdDraw.setPenColor(StdDraw.BLACK); 
-        //StdDraw.text(.25 * N, -N * .025, perc.numberOfOpenSites() + " open sites"); 
+        StdDraw.text(.25 * N, -N * .025, perc.numberOfOpenSites() + " open sites"); 
         if (perc.percolates()) StdDraw.text(.75 * N, -N * .025, "percolates"); 
         else                   StdDraw.text(.75 * N, -N * .025, "does not percolate"); 
     } 
@@ -79,7 +83,7 @@ public class PerculationVisualizer {
         		"src/testFiles/input8.txt", "src/testFiles/java60.txt",
         		"src/testFiles/sedgewick60.txt", "src/testFiles/snake101.txt",
         		"src/testFiles/snake13.txt"
-        }; 
+        };
          
         long startTime = System.nanoTime();
         for (String filename : fileNames) { 
@@ -89,6 +93,6 @@ public class PerculationVisualizer {
         long stopTime = System.nanoTime();
         
         System.out.println("Execution was successfully completed."); 
-        System.out.println("Time elapsed: " + (stopTime - startTime) + " nanoseconds.");
+        System.out.println("Time elapsed: " + ((stopTime - startTime) / 1000000000) + " seconds.");
     } 
 }
