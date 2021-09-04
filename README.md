@@ -16,12 +16,14 @@ Dynamic connectivity solution to estimate percolation threshold:
 
 - Create an object for each site and name them <i>0</i> to <i>(N<sup>2</sup>) - 1</i>.
 - Sites are in same component if connected by open sites.
-- Percolates iff any site on bottom row is connected to any site on top row [brute-force algorithm: <i>N<sup>2</sup></i> calls to connected()].
+- Percolates iff any site on bottom row is connected to any site on top row.
+  - brute-force algorithm: <i>N<sup>2</sup></i> calls to <i>connected()</i>.
 
 Clever trick: 
 
 - Introduce 2 virtual sites (and connections to top and bottom).
-- Percolates <i>iff</i> virtual top site is connected to virtual bottom site [more efficient algorithm: only 1 call to connected()].
+- Percolates <i>iff</i> virtual top site is connected to virtual bottom site.
+  - more efficient algorithm: only <i>1</i> call to <i>connected()</i>.
 
 <img width="746" alt="virtualTB" src="https://user-images.githubusercontent.com/83437383/132085686-2559745e-cecc-4f51-ba30-89b8a8ee68f6.png">
 
