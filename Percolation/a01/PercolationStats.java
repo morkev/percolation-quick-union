@@ -71,12 +71,10 @@ public class PercolationStats {
         return stats;
     }
 
-
-	/**
-	 * Returns the mean value.
-	 * Mean: ((fraction of open sites) + (fraction of open sites) + 
-	 * ...(fraction of open sites T times)) / T times
-	 */
+   /**
+    * Returns the mean value.* Mean: ((fraction of open sites) + (fraction of open sites) + 
+    * ...(fraction of open sites T times)) / T times
+    */
     public double mean() {
         return StdStats.mean(fracOpenSites);
     }
