@@ -6,12 +6,10 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw; 
 
 /** 
- * After each site is opened, PerculationVisualizer
+ * After each site is opened, <code>PerculationVisualizer</>
  * will draw full sites in light blue, open sites 
  * (i.e., sites that aren't full) in white, and blocked sites in black,
  * with site (0, 0) in the upper left-hand corner.
- * 
- * @author //TODO
  */ 
 public class PerculationVisualizer { 
     // delay in milliseconds (controls animation speed) 
