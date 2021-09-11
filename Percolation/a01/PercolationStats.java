@@ -111,9 +111,9 @@ public class PercolationStats {
      */
     public static void main(String[] args) {
         PercolationStats perc = new PercolationStats(200, 100);
-        System.out.println(perc.mean());
-        System.out.println(perc.stddev());
-        System.out.println(perc.confidenceLow());
-        System.out.println(perc.confidenceHigh());
+        System.out.println("mean() = " + perc.mean());
+        System.out.println("stddev() = " + perc.stddev());
+        System.out.println("confidenceLow() = " + perc.confidenceLow());
+        System.out.println("confidenceHigh() = " + perc.confidenceHigh());
     }
 }
