@@ -34,7 +34,7 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 	 * @param N of type integer.
 	 */
 	public Percolation(int N){
-		if(N < 0) {
+		if(N <= 0) {
 			//Throw exception if N is <= 0
 			throw new IllegalArgumentException("N must be greater than 0.");
 		}
@@ -209,4 +209,5 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 	public String numberOfOpenSites() {
 		return "" + numberOpen;
 	}
+		
 }
