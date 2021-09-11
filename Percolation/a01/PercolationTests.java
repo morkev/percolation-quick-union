@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Functional and Performance 
- * Requirements for Criteria
+ * Functionality and Performance 
+ * Requirements –> Criteria
  * 
  * Additional jUnit tests created to test 
  * whether the functional and performance 
