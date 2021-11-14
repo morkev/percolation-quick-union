@@ -2,17 +2,17 @@ package a01;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
-       /**
- 	* Models a percolation system.
- 	* N-by-N grid of sites (each square represents a site).
- 	* White site = open; Black site = closed.
- 	* Each site is open with probability p (or blocked with probability 1-p).
- 	* System percolates iff top and bottom are connected by open sites.
- 	* 
-	* @author Kevin Mora
-	* @author Jordan Bramhall
-	*/
-	public class Percolation {
+/**
+ * Models a percolation system.
+ * N-by-N grid of sites (each square represents a site).
+ * White site = open; Black site = closed.
+ * Each site is open with probability p (or blocked with probability 1-p).
+ * System percolates iff top and bottom are connected by open sites.
+ * 
+* @author Kevin Mora
+* @author Jordan Bramhall
+*/
+public class Percolation {
 	private int n; // stores N
 	private int size; // Number of sites in the grid
 	private int topRow; // Virtual Top
