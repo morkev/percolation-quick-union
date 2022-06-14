@@ -1,4 +1,4 @@
-# Percolation-Quick-Union
+# Percolation Quick-Union
 
 Write a program to estimate the value of the percolation threshold via Monte Carlo simulation. 
 - <i>N-by-N</i> grids of sites (each square represents a site).
